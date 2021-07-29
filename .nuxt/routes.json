@@ -1,8 +1,8 @@
 [
   {
-    "name": "",
-    "path": "",
-    "component": "C:\\\\Users\\\\work\\\\Documents\\\\Curso\\\\nuxtb\\\\node_modules\\\\@nuxt\\\\vue-app\\\\template\\\\pages\\\\index.vue",
-    "_name": "_1dfea0a0"
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]
