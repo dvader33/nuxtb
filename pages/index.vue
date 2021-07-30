@@ -8,6 +8,17 @@
 <script>
 import homes from '~/data/homes.json'
 export default{
+    head(){
+        return{
+            title: "Homepage",
+            meta: [{
+                name: 'description',
+                content: 'this is a home page',
+                hid: 'description'
+        }]
+        }
+        
+    },
     data(){
         return{
             homes: homes.slice(0,3)
