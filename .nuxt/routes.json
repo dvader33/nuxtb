@@ -2,13 +2,15 @@
   {
     "name": "home-id",
     "path": "/home/:id?",
-    "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\home\\\\_id.vue",
-    "chunkName": "pages/home/_id"
+    "component": "C:\\\\Users\\\\vad\\\\Desktop\\\\projects\\\\nuxtb\\\\pages\\\\home\\\\_id.vue",
+    "chunkName": "pages/home/_id",
+    "_name": "_58771656"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\vad\\\\Desktop\\\\projects\\\\nuxtb\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1ef5206d"
   }
 ]
