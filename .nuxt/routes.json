@@ -3,14 +3,12 @@
     "name": "home-id",
     "path": "/home/:id?",
     "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\home\\\\_id.vue",
-    "chunkName": "pages/home/_id",
-    "_name": "_7fc56c70"
+    "chunkName": "pages/home/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_40c69387"
+    "chunkName": "pages/index"
   }
 ]
