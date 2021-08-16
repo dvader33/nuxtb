@@ -18,11 +18,7 @@ import homes from '~/data/homes'
 export default{
     head(){
         return {
-            title: this.home.title,
-            script:[{
-                src: `https://maps.googleapis.com/maps/api/js?key=${process.env.VUE_APP_MAPKEY}&libraries=places`,
-                defer: true,
-            }]
+            title: this.home.title
         }
     },
     data(){
@@ -31,16 +27,9 @@ export default{
         }
     },
     mounted(){
-        const mapOptions = {
-            zoom: 18,
-            center: new window.google.maps.LatLng(this.home._geoloc.lat,this.home._geoloc.lng),
-            disableDefaultUI: true,
-            zoomControl: true
-        }
-         const map = new window.google.maps.Map(this.$refs.map, mapOptions)
-         const posistion = new window.google.maps.LatLng(this.home._geoloc.lat,this.home._geoloc.lng)
-         const marker = new window.google.maps.Marker({ posistion })
-         marker.setMap(map)
+        const ky = process.env
+        console.log(ky)
+        this.$maps.showMap(this.$refs.map, this.home._geoloc.lat, this.home._geoloc.lng, process.env.VUE_APP_MAPKEY)
     },
     created(){
         const home = homes.find((home) => home.objectID == this.$route.params.id)
