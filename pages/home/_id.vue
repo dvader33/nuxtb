@@ -27,9 +27,7 @@ export default{
         }
     },
     mounted(){
-        const ky = process.env
-        console.log(ky)
-        this.$maps.showMap(this.$refs.map, this.home._geoloc.lat, this.home._geoloc.lng, process.env.VUE_APP_MAPKEY)
+        this.$maps.showMap(this.$refs.map, this.home._geoloc.lat, this.home._geoloc.lng)
     },
     created(){
         const home = homes.find((home) => home.objectID == this.$route.params.id)

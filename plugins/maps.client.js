@@ -1,17 +1,16 @@
-export default function (context, inject){
+export default function ({ $config }, inject){
     let maploaded = false
     let mapWaiting = null
     let mpkey = null
-
-    addScript()
-
     inject('maps',{
         showMap
     })
 
+    addScript()
+
     function addScript(){
         const script = document.createElement('script')
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${mpkey}&libraries=places&callback=initMap`
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${$config.mapKey}&libraries=places&callback=initMap`
         script.async = true
         window.initMap = initMap
         document.head.appendChild(script)
@@ -39,8 +38,7 @@ export default function (context, inject){
          marker.setMap(map)
     }
 
-    function showMap(canvas, lat, lng, key){
-        mpkey = key
+    function showMap(canvas, lat, lng){
         if(maploaded){
             renderMap(canvas,lat,lng)
         } else {
