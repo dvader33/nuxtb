@@ -15,8 +15,10 @@ export default{
     router:{
         prefetchLinks: false,
     },
-    plugins: [ '~/plugins/maps.client' ],
+    plugins: [ '~/plugins/maps.client', '~/plugins/dataApi' ],
     publicRuntimeConfig:{
-        mapKey: process.env.VUE_APP_MAPKEY
+        mapKey: process.env.VUE_APP_MAPKEY,
+        appId: process.env.VUE_APP_APPID,
+        apiKey: process.env.VUE_APP_APIKEY
     }
 }
