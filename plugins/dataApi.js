@@ -1,19 +1,41 @@
 export default function ({ $config }, inject) {
     const appId = $config.appId
     const apiKey = $config.apiKey
+    const headers =  {
+        'X-Algolia-API-Key': apiKey,
+        'X-Algolia-Application-Id': appId
+    }
 
     inject('dataApi', {
         getHome
     })
 
     async function getHome(homeId){
-       const response = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/homes/${homeId}`, {
-            headers: {
-                'X-Algolia-API-Key': apiKey,
-                'X-Algolia-Application-Id': appId
-            }
-        })
+      try{  
+      return unWrap(await fetch(`https://${appId}-dsn.algolia.net/1/indexes/homes/${homeId}`, { headers }))
+      } catch(error){
+          return getErrorResponse
+      }
+    }
+
+    async function unWrap (response){
         const json = await response.json()
-        return json
+        const {ok, status, statusText} = response
+        return{
+            json,
+            ok,
+            status,
+            statusText,
+        }
+    }
+
+    function getErrorResponse(error){
+       return{
+            ok: false,
+            status: 500,
+            statusText: error.message,
+            json: {}
+       } 
+
     }
 }
