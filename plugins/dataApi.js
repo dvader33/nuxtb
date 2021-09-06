@@ -36,7 +36,9 @@ export default function ({ $config }, inject) {
             headers,
             method: 'POST',
             body: JSON.stringify({
-                    filters: `homeId:${homeId}`
+                    filters: `homeId:${homeId}`,
+                    hitsPerPage: 4,
+                    attributesToHighlight: []
             })
          }))} catch(error){
             return getErrorResponse
