@@ -3,18 +3,21 @@
     "name": "search",
     "path": "/search",
     "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\search.vue",
-    "chunkName": "pages/search"
+    "chunkName": "pages/search",
+    "_name": "_f86a927a"
   },
   {
     "name": "home-id",
     "path": "/home/:id?",
     "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\home\\\\_id.vue",
-    "chunkName": "pages/home/_id"
+    "chunkName": "pages/home/_id",
+    "_name": "_7fc56c70"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\VaderPC\\\\Desktop\\\\curso\\\\nuxtb\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_40c69387"
   }
 ]
