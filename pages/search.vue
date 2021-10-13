@@ -22,8 +22,17 @@ export default {
     },
     methods:{
         updateMap(){
-            this.$maps.showMap(this.$refs.map, this.lat, this.lng)
+            this.$maps.showMap(this.$refs.map, this.lat, this.lng, this.getHomeMarkers())
 
+        },
+        getHomeMarkers(){
+            return this.homes.map((home) => {
+                return{
+                    ...home._geoloc,
+                }
+            }
+
+            )
         }
     },
    /* watchQuery:['lat'],*/ //opcion para hacerlo con watch no falla en prod puede fallar en dev
