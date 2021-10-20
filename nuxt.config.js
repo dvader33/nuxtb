@@ -16,9 +16,19 @@ export default{
         prefetchLinks: false,
     },
     plugins: [ '~/plugins/maps.client', '~/plugins/dataApi' ],
+    modules:[],
+    buildModules:['@nuxtjs/tailwindcss'],
+    css: ['~/assets/sass/app.scss'],
+    build: {
+        extractCSS: true,
+        loaders: {
+            limit: 0,
+        }
+    },
     publicRuntimeConfig:{
         mapKey: process.env.VUE_APP_MAPKEY,
         appId: process.env.VUE_APP_APPID,
         apiKey: process.env.VUE_APP_APIKEY
-    }
+    },
+    
 }
