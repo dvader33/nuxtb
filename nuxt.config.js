@@ -15,7 +15,7 @@ export default{
     router:{
         prefetchLinks: false,
     },
-    plugins: [ '~/plugins/maps.client', '~/plugins/dataApi' ],
+    plugins: [ '~/plugins/maps.client', '~/plugins/dataApi', '~/plugins/auth.client' ],
     modules:[],
     buildModules:['@nuxtjs/tailwindcss'],
     css: ['~/assets/sass/app.scss'],
@@ -28,7 +28,13 @@ export default{
     publicRuntimeConfig:{
         mapKey: process.env.VUE_APP_MAPKEY,
         appId: process.env.VUE_APP_APPID,
-        apiKey: process.env.VUE_APP_APIKEY
+        apiKey: process.env.VUE_APP_APIKEY,
+        auth:{
+            cookieName: 'idToken',
+            clientId: process.env.VUE_APP_CLIENTID
+        }
     },
+    privateRuntimeConfig:{
+    }
     
 }
